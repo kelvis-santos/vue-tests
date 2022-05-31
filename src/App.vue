@@ -1,19 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="component-box">
+      <search-input />
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SearchInput from "./components/search-input/index.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    SearchInput,
+  },
+  data() {
+    return {
+      search: "",
+    };
+  },
+};
 </script>
 
 <style>
@@ -24,5 +30,15 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.component-box {
+  width: 30%;
 }
 </style>
